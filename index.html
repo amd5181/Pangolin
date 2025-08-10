@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pangolin Supply Chain AI Consulting</title>
+    <!-- Use Tailwind CSS for a modern, responsive, and minimalist design -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Dark theme background */
+            background-color: #111827; /* Tailwind's gray-900 */
+        }
+        /* Hide the pricing page initially */
+        #pricing-page {
+            display: none;
+        }
+        /* Custom spinner animation */
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin-fast {
+            animation: spin 0.6s linear infinite;
+        }
+    </style>
+</head>
+<body class="text-slate-200">
+    
+    <!-- Navigation Bar -->
+    <header class="bg-gray-900 shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-2 text-2xl font-bold text-[#b45309]" onclick="showPage('landing-page')">
+                <!-- NEW Pangolin JPG Logo -->
+                <img src="public/image_ab37ba.jpg" alt="Pangolin Consulting Logo" class="w-10 h-10 rounded-full">
+                <span>Pangolin</span>
+            </a>
+            <div class="flex space-x-4">
+                <a href="#" class="text-slate-400 hover:text-[#9a3412] transition-colors duration-300" onclick="showPage('landing-page')">Home</a>
+                <a href="#" class="text-slate-400 hover:text-[#9a3412] transition-colors duration-300" onclick="showPage('pricing-page')">Pricing</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Landing Page Content -->
+        <div id="landing-page">
+            <!-- Hero Section -->
+            <section class="text-center py-20 px-6 bg-gray-800 rounded-lg shadow-xl mb-12">
+                <h1 class="text-5xl md:text-6xl font-bold mb-4 leading-tight">
+                    Optimize Your Supply Chain with <span class="text-[#b45309]">AI</span>
+                </h1>
+                <p class="text-xl text-slate-400 mb-8 max-w-2xl mx-auto">
+                    Pangolin leverages cutting-edge artificial intelligence to revolutionize your supply chain,
+                    driving efficiency, reducing costs, and boosting resilience in a complex global market.
+                </p>
+                <button class="bg-[#b45309] text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-[#9a3412] transition-colors duration-300" onclick="showPage('pricing-page')">
+                    Learn How We Can Help
+                </button>
+            </section>
+
+            <!-- Key Features Section -->
+            <div class="grid md:grid-cols-2 gap-10">
+
+                <!-- Cost Optimization -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-6">
+                    <div class="md:w-1/2">
+                        <!-- Updated to use the image from your public folder -->
+                        <img src="public/data-4570804_1280.jpg" alt="Cost optimization chart" class="rounded-lg shadow-md w-full">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl font-semibold mb-3 text-[#b45309]">Cost Optimization</h2>
+                        <p class="text-slate-400 leading-relaxed">
+                            Our algorithms analyze vast datasets to identify inefficiencies and recommend
+                            strategic changes, drastically reducing operational costs across your entire supply chain.
+                            From transportation to warehousing, we find every opportunity for savings.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Inventory Management -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-6">
+                    <div class="md:w-1/2">
+                        <!-- Updated to use the image from your public folder -->
+                        <img src="public/graph-2588994_1280.jpg" alt="Inventory management graph" class="rounded-lg shadow-md w-full">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl font-semibold mb-3 text-[#b45309]">Inventory Management</h2>
+                        <p class="text-slate-400 leading-relaxed">
+                            Gain full visibility and control over your stock. Our AI predicts demand fluctuations
+                            and optimizes inventory levels in real-time, preventing stockouts and minimizing
+                            carrying costs.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Demand Forecasting -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-6">
+                    <div class="md:w-1/2">
+                        <!-- Updated to use the image from your public folder -->
+                        <img src="public/interface-3614766_1280.png" alt="Demand forecasting data" class="rounded-lg shadow-md w-full">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl font-semibold mb-3 text-[#b45309]">Demand Forecasting</h2>
+                        <p class="text-slate-400 leading-relaxed">
+                            Predicting the future is complex, but our AI makes it manageable. We use sophisticated
+                            models to forecast demand with high accuracy, enabling better planning and resource
+                            allocation.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Algorithmic Calculations -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-6">
+                    <div class="md:w-1/2">
+                        <!-- Updated to use the image from your public folder -->
+                        <img src="public/stock-1863880_1280.jpg" alt="Algorithmic calculations table" class="rounded-lg shadow-md w-full">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl font-semibold mb-3 text-[#b45309]">Algorithmic Calculations</h2>
+                        <p class="text-slate-400 leading-relaxed">
+                            Our core strength lies in our ability to perform complex algorithmic calculations
+                            at scale. We process millions of data points to provide actionable insights and
+                            real-time optimizations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pricing Page Content -->
+        <div id="pricing-page">
+            <div class="max-w-2xl mx-auto bg-gray-800 p-8 rounded-lg shadow-xl">
+                <h1 class="text-4xl font-bold text-center text-[#b45309] mb-4">
+                    Ready to Optimize Your Supply Chain?
+                </h1>
+                <p class="text-center text-lg text-slate-400 mb-8">
+                    Fill out the form below and a member of our team will reach out to you shortly to discuss your needs and provide a custom quote.
+                </p>
+
+                <form id="contact-form" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-slate-200">Full Name</label>
+                        <input type="text" id="name" name="name" required class="mt-1 block w-full px-4 py-2 border border-gray-600 bg-gray-700 text-slate-200 rounded-md shadow-sm focus:ring-[#b45309] focus:border-[#b45309] transition-colors duration-200">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-slate-200">Email Address</label>
+                        <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-2 border border-gray-600 bg-gray-700 text-slate-200 rounded-md shadow-sm focus:ring-[#b45309] focus:border-[#b45309] transition-colors duration-200">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-slate-200">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="mt-1 block w-full px-4 py-2 border border-gray-600 bg-gray-700 text-slate-200 rounded-md shadow-sm focus:ring-[#b45309] focus:border-[#b45309] transition-colors duration-200">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-slate-200">How can we help?</label>
+                        <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-4 py-2 border border-gray-600 bg-gray-700 text-slate-200 rounded-md shadow-sm focus:ring-[#b45309] focus:border-[#b45309] transition-colors duration-200"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" id="submit-button" class="w-full bg-[#b45309] text-white font-semibold py-3 px-4 rounded-md shadow-lg hover:bg-[#9a3412] transition-colors duration-300">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Loading message container -->
+                <div id="loading-message" class="mt-8 p-6 bg-gray-700 border border-gray-600 text-slate-200 rounded-lg shadow-inner text-center hidden">
+                    <div class="flex justify-center items-center space-x-2">
+                        <svg class="animate-spin-fast h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.929l3-2.638z"></path>
+                        </svg>
+                        <p class="font-bold text-xl">Submitting...</p>
+                    </div>
+                </div>
+
+                <!-- Thank you message container -->
+                <div id="thank-you-message" class="mt-8 p-6 bg-[#4a1f0a] border border-[#b45309] text-white rounded-lg shadow-inner text-center hidden">
+                    <p class="font-bold text-xl">Thank you for your submission!</p>
+                    <p class="mt-2">A member of our team will reach out to you shortly.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-slate-400 text-center py-6 mt-12">
+        <p>&copy; 2025 Pangolin AI Consulting. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Page Navigation and Form Submission -->
+    <script>
+        // Function to show/hide pages
+        function showPage(pageId) {
+            document.getElementById('landing-page').style.display = 'none';
+            document.getElementById('pricing-page').style.display = 'none';
+            document.getElementById(pageId).style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Handle form submission with a delay
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            // Prevent the default form submission that would reload the page
+            event.preventDefault();
+
+            // Hide the form and show the loading message
+            document.getElementById('contact-form').style.display = 'none';
+            document.getElementById('loading-message').style.display = 'block';
+
+            // Simulate a 2-second delay for processing
+            setTimeout(() => {
+                // Hide the loading message
+                document.getElementById('loading-message').style.display = 'none';
+                
+                // Show the thank you message
+                document.getElementById('thank-you-message').style.display = 'block';
+
+                // Optional: Clear the form fields after a short delay
+                setTimeout(() => {
+                    event.target.reset();
+                }, 3000);
+            }, 2000);
+        });
+    </script>
+
+</body>
+</html>
